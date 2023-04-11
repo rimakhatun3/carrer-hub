@@ -14,6 +14,7 @@ const Header = () => {
     <Link to='/statis'>Statistics</Link>
             <Link to='/apply'>Applied Jobs</Link>
             <Link to='/blog'>Blog</Link>
+            
         </nav> 
         <button className='py-3 px-6 bg-teal-500 rounded-md'>Star Applying</button>
         </div>

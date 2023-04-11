@@ -1,6 +1,6 @@
 import React from 'react';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-// import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 const Statistics = () => {
    
     const marksArray = [
@@ -27,7 +27,7 @@ const Statistics = () => {
         {
           id: 5,
           name: "geometry-genius",
-          math: 54
+          mark: 54
         },
         {
           id: 6,
@@ -48,11 +48,15 @@ const Statistics = () => {
       ];
     return (
         <div>
-         {/* <AreaChart width={500}
+        
+         <AreaChart width={500}
           height={400}
-          data={marksArray} >
-         
-         </AreaChart>    */}
+          data={marksArray}>
+         <XAxis dataKey="name" />
+            <YAxis  />
+            <Tooltip />
+            <Area type="monotone" dataKey="mark" stroke="#8884d8" fill="#8884d8" />
+         </AreaChart>
         </div>
     );
 };
