@@ -47,7 +47,7 @@ const Statistics = () => {
         
       ];
     return (
-        <div>
+        <div className='mt-20 mx-0'>
         
          <AreaChart width={500}
           height={400}
