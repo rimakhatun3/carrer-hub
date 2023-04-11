@@ -8,6 +8,10 @@ const Home = () => {
     const features = useLoaderData()
     // console.log(features)
     const [category,setCategory] = useState([])
+    const [seeAll ,setSeeAll] =useState(false)
+    const handleSeeAll=()=>{
+setSeeAll(true)
+    }
     useEffect(()=>{
         fetch('Data.json')
         .then(res=>res.json())
@@ -39,9 +43,12 @@ const Home = () => {
             <p className='text-stone-500 mb-10'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className='grid grid-cols-2 gap-10'>
                 {
-                    features&& features.slice(0,4).map(feature=><Feature key={feature.id} feature={feature}></Feature>)
+                    features&& features.slice(0,seeAll?8:4).map(feature=><Feature key={feature.id} feature={feature}></Feature>)
                 }
             </div>
+            {
+                !seeAll&&<button onClick={handleSeeAll} className='py-3 px-6 bg-teal-500 rounded-md mt-8'>See All Jobs</button>
+            }
            </section>
         </div>
     );
