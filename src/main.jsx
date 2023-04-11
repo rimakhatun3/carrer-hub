@@ -8,10 +8,12 @@ import Home from './Components/Home/Home'
 import ViewDetails from './Components/ViewDetails/ViewDetails'
 import AppliedJob from './Components/AppliedJob/AppliedJob'
 import Statistics from './Components/Statistics/Statistics'
+import ErrorPage from './Components/EroorPage/ErrorPage'
 const router = createBrowserRouter([
   {
     path:'/',
     element:<Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
