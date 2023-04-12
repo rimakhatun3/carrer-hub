@@ -52,9 +52,10 @@ const Statistics = () => {
          <AreaChart width={700}
           height={400}
           data={marksArray}>
+            <CartesianGrid strokeDasharray="3 3" />
          <XAxis dataKey="name" />
             <YAxis  />
-            <Tooltip />
+            {/* <Tooltip /> */}
             <Area type="monotone" dataKey="mark" stroke="#8884d8" fill="#8884d8" />
          </AreaChart>
         </div>
