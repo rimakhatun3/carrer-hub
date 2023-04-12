@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.css'
 const Header = () => {
     return (
-        <div className='flex justify-between items-center mx-auto bg-slate-50 py-4 px-6'>
+        <div className='w-ful  lg:flex md:flex justify-between items-center mx-auto bg-slate-50 py-4 px-6'>
             <div>
 <h2 className='text-2xl font-bold lg:ps-20'>JOBSHUBS</h2>
     

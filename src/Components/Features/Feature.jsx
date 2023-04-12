@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Feature = ({feature}) => {
     const {companyLogo,companyName,fullTime,jobTitle,location,remote,salary,id} = feature
     return (
-        <div className='flex flex-col justify-center items-start border  py-8 ps-10 mx-0 rounded-md'>
+        <div className='flex flex-col w-full justify-center items-start border  py-8 ps-10 mx-0 rounded-md'>
             <img src={companyLogo} alt="" />
             <p className='my-2'>{jobTitle}</p>
             <p className='my-4'>{companyName}</p>

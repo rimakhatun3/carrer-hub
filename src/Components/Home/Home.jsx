@@ -18,8 +18,8 @@ setSeeAll(true)
         .then(data=>setCategory(data))
     },[])
     return (
-        <div >
-           <section className='flex justify-between items-center bg-slate-50 px-24 pt-10'>
+        <div className='w-full' >
+           <section className='w-full md:flex  lg:flex justify-between items-center bg-slate-50 lg:px-24 pt-10'>
            <div className='text-left'>
                 <h2 className='text-3xl font-extrabold mb-10'>One Step <br /> Closer To Your <br /> <span className='text-teal-300'>Dream Job</span> </h2>
                 <p className='mb-10'>Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all <br /> your job application from start to finish.</p>
@@ -31,7 +31,7 @@ setSeeAll(true)
             <h2 className='text-2xl font-bold mb-5'>Job Category List</h2>
             <p className='text-stone-500 mb-10'>Explore thousands of job opportunities with all the information you need. Its your future</p>
 
-           <div className='grid grid-cols-4 mt-5 gap-5'>
+           <div className='lg:grid lg:grid-cols-4 mt-5 gap-5'>
 {
     category.map(data=><Category key={data.id} data={data}></Category>)
 }
@@ -41,7 +41,7 @@ setSeeAll(true)
            <section className='mt-20'>
             <h2 className='text-2xl font-bold mb-5'>Featured Jobs</h2>
             <p className='text-stone-500 mb-10'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            <div className='grid grid-cols-2 gap-10'>
+            <div className='lg:grid lg:grid-cols-2 gap-10'>
                 {
                     features&& features.slice(0,seeAll?8:4).map(feature=><Feature key={feature.id} feature={feature}></Feature>)
                 }
