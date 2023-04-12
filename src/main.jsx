@@ -9,6 +9,7 @@ import ViewDetails from './Components/ViewDetails/ViewDetails'
 import AppliedJob from './Components/AppliedJob/AppliedJob'
 import Statistics from './Components/Statistics/Statistics'
 import ErrorPage from './Components/EroorPage/ErrorPage'
+import Blog from './Components/Blog/Blog'
 const router = createBrowserRouter([
   {
     path:'/',
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       path:'statis',
       element:<Statistics></Statistics>
      
+     },
+     {
+      path:'blog',
+      element:<Blog></Blog>
      }
      
     ]

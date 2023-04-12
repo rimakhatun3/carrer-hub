@@ -49,7 +49,7 @@ const Statistics = () => {
     return (
         <div className='mt-20 mx-0'>
         
-         <AreaChart width={500}
+         <AreaChart width={700}
           height={400}
           data={marksArray}>
          <XAxis dataKey="name" />

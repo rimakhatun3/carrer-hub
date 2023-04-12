@@ -1,35 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getShoppingCart } from '../../utilitis/fakaDb';
 import { useLoaderData } from 'react-router-dom';
 import ApplyJob from '../ApplyJob/ApplyJob';
 
 const AppliedJob = () => {
-    const CartData= useLoaderData()
+    const cartData= useLoaderData()
     const [filterValue,setFilterValue] = useState("all")
     
     let newCart = []
     const cart = getShoppingCart()
     for(const id in cart){
     
-        const findData = CartData.find(data=>data.id==id)
+        const findData = cartData.find(data=>data.id==id)
     if(findData){
         newCart.push(findData)
     }
-    // console.log(newCart)
 
 }
 
-const isExists =newCart.filter((product)=>{
-    console.log(product)
-    if(filterValue ==='remote'){
-        return product.fulltime
-    }
-    else if(filterValue==='fullTime'){
-        return product.remote
-    }else{
-        product
-    }
-})
+// useEffect(()=>{
+//     const isExists =cartData.filter((product)=>{
+    
+//         if(filterValue ==='remote'){
+//             return product.fulltime
+//         }
+//         else if(filterValue==='fullTime'){
+//             return product.remote
+//         }else{
+//             product
+//         }
+      
+//     })
+// },[newCart])
+
+// console.log(isExists)
 const handleFilterValue=(event)=>{
 setFilterValue(event.target.value)
 }
@@ -44,7 +48,7 @@ return (
 </select>
             </div>
             
-           <div> {newCart.map(data=><ApplyJob key={data.id} isExists={isExists} data={data}></ApplyJob>)}</div>
+           <div> {newCart.map(data=><ApplyJob key={data.id}  data={data}></ApplyJob>)}</div>
         </div>
     );
 };
